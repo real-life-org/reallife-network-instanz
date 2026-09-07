@@ -58,3 +58,17 @@ als WebP abgelegt. Wer ein Bild austauscht, muss `width`/`height` im Markup
 mitziehen, sonst springt die Seite beim Laden.
 
 Alle abgebildeten Menschen haben zugestimmt.
+
+## Schriften
+
+`landing/fonts/` enthält Bricolage Grotesque, Hanken Grotesk und Spectral —
+alle drei unter der [SIL Open Font License 1.1][ofl], die das Mitliefern
+ausdrücklich erlaubt. Sie liegen bewusst hier statt bei Google: so lädt die
+Seite keine Ressource von Dritten, und niemand wird beim Besuch an einen
+fremden Server gemeldet.
+
+[ofl]: https://openfontlicense.org/
+
+## Bilder
+
+Alle abgebildeten Menschen haben der Veröffentlichung zugestimmt.
