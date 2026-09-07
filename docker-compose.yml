@@ -1,0 +1,47 @@
+# Eine RLS-Instanz auf Timos NixOS-Server: Landingpage auf /, App auf /app.
+#
+# Abweichung von deploy/app/docker-compose.yml aus dem Stack-Repo: Dieser
+# Server haengt Traefik nicht in ein eigenes `web`-Netz, sondern laesst alle
+# Apps auf der Default-Bridge laufen (so wie wot-relay-vnext und
+# macher-network). Darum `network_mode: bridge` statt `networks: web`.
+#
+# Start:  docker compose up -d      (Konfiguration in .env)
+
+services:
+  app:
+    image: ghcr.io/real-life-org/rls-app:${RLS_IMAGE_TAG:?RLS_IMAGE_TAG fehlt - welche Version soll laufen?}
+    container_name: rls-app
+    network_mode: bridge
+    restart: unless-stopped
+    environment:
+      # --- Dienste ---
+      RLS_RELAY_URL: ${RLS_RELAY_URL:-wss://relay.web-of-trust.de}
+      RLS_PROFILES_URL: ${RLS_PROFILES_URL:-}
+      RLS_DEFAULT_CONNECTOR: ${RLS_DEFAULT_CONNECTOR:-wot}
+      RLS_SUPABASE_URL: ${RLS_SUPABASE_URL:-}
+      RLS_SUPABASE_ANON_KEY: ${RLS_SUPABASE_ANON_KEY:-}
+      # --- Identitaet ---
+      RLS_APP_NAME: ${RLS_APP_NAME:?RLS_APP_NAME fehlt - wie heisst diese Instanz?}
+      RLS_FAVICON_URL: ${RLS_FAVICON_URL:-/branding/favicon.svg}
+    volumes:
+      # Beides gehoert dem Betreiber, read-only gemountet.
+      - ./landing:/srv/landing:ro
+      - ./branding:/srv/branding:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.rls-app.rule=Host(`${RLS_DOMAIN:?RLS_DOMAIN fehlt - unter welcher Domain laeuft die Instanz?}`)"
+      - "traefik.http.routers.rls-app.entrypoints=websecure"
+      - "traefik.http.routers.rls-app.tls.certresolver=letsencrypt"
+      # Das Image laeuft unprivilegiert und lauscht darum auf 8080, nicht 80.
+      - "traefik.http.services.rls-app.loadbalancer.server.port=8080"
+      # nginx im Image baut den Verzeichnis-Redirect /app -> /app/ aus seinem
+      # eigenen Hoerport und schickt darum nach http://<host>:8080/app/ - von
+      # aussen nicht erreichbar. Bis das im Image behoben ist (dort gehoert
+      # `absolute_redirect off`), setzt der Proxy den Schraegstrich selbst.
+      - "traefik.http.middlewares.rls-app-slash.redirectregex.regex=^https://([^/]+)/app$$"
+      - "traefik.http.middlewares.rls-app-slash.redirectregex.replacement=https://$${1}/app/"
+      - "traefik.http.middlewares.rls-app-slash.redirectregex.permanent=false"
+      - "traefik.http.routers.rls-app.middlewares=rls-app-slash"
+      # Instanzen pinnen ihre Version - Watchtower soll NICHT automatisch
+      # auf eine neue Minor ziehen.
+      - "com.centurylinklabs.watchtower.enable=false"

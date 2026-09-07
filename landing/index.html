@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reallife Network — Ein Netz wächst aus echter Begegnung</title>
+<meta name="description" content="Ein lebendiges Geflecht aus echten Beziehungen — lokal verwurzelt, freiwillig, von Hand geknüpft. Das Reallife Network wächst dort, wo Menschen aufeinander zugehen.">
+<link rel="icon" href="/branding/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://reallife.network">
+<meta property="og:site_name" content="reallife.network">
+<meta property="og:title" content="Reallife Network — Ein Netz wächst aus echter Begegnung">
+<meta property="og:description" content="Ein lebendiges Geflecht aus echten Beziehungen — lokal verwurzelt, freiwillig, von Hand geknüpft.">
+<meta property="og:image" content="https://reallife.network/og.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+/* Schriften liegen bei uns — keine Anfrage an Dritte. */
+@font-face {
+  font-family: "Bricolage Grotesque"; font-style: normal; font-weight: 200 800;
+  font-display: swap; src: url(/fonts/bricolage.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Hanken Grotesk"; font-style: normal; font-weight: 100 900;
+  font-display: swap; src: url(/fonts/hanken.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Spectral"; font-style: italic; font-weight: 400;
+  font-display: swap; src: url(/fonts/spectral-italic.woff2) format("woff2");
+}
+
+/* Die Palette der Marke. Hell ist die Vorgabe; dunkel spiegelt dieselben
+   Rollen, damit die Seite in beiden Fassungen dieselbe Seite bleibt. */
+:root {
+  color-scheme: light dark;
+  --cream: #F6F1E7;
+  --surface: #FCFAF4;
+  --line: #E6DCC8;
+  --ink: #2A2820;
+  --body: #4A463A;
+  --muted: #736C58;
+  --faint: #9A917A;
+  --sage: #8C9A5B;
+  --ocker: #D89B36;
+  --terracotta: #C15F3C;
+  --forest: #3E5E2E;
+  --on-forest: #F6F1E7;
+  --band-bg: #20231B;
+  --band-surface: #2A2E23;
+  --band-line: #3D4233;
+  --band-text: #ECE6D6;
+  --band-body: #CDD6BB;
+  --outline: #CDBFA3;
+  --page: 1180px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cream: #20231B;
+    --surface: #2A2E23;
+    --line: #3D4233;
+    --ink: #ECE6D6;
+    --body: #C8C3AF;
+    --muted: #A39E89;
+    --faint: #8A8571;
+    --sage: #A7B473;
+    --ocker: #E0AC55;
+    --terracotta: #DB7C58;
+    --forest: #6E9455;
+    --on-forest: #16180F;
+    --band-bg: #171A12;
+    --band-surface: #22261C;
+    --band-line: #363B2C;
+    --outline: #4A5040;
+  }
+  .band { border-color: var(--band-line); }
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 78px; overflow-x: clip; }
+::selection { background: var(--ocker); color: #2A2820; }
+
+body {
+  margin: 0; overflow-x: clip;
+  background: var(--cream); color: var(--ink);
+  font: 400 16px/1.6 "Hanken Grotesk", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, .display {
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  letter-spacing: -0.03em; margin: 0;
+}
+h2 { text-wrap: balance; }
+a { color: inherit; }
+.wrap { max-width: var(--page); margin: 0 auto; padding-inline: 2rem; }
+@media (max-width: 640px) { .wrap { padding-inline: 1.25rem; } .band { padding: 36px 24px; } .quote { padding: 32px 24px; } }
+
+/* --- Kopfzeile --- */
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--cream) 80%, transparent);
+  backdrop-filter: blur(10px) saturate(150%);
+}
+.nav-inner { display: flex; align-items: center; gap: 26px; padding-block: 14px; }
+.brand { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+.brand span { font-family: "Bricolage Grotesque", sans-serif; font-size: 18px; font-weight: 700; letter-spacing: -0.02em; }
+.brand em { font-style: normal; color: var(--terracotta); }
+.nav-links { display: none; align-items: center; gap: 26px; margin-left: auto; }
+.nav-links a { font-size: 14.5px; font-weight: 500; color: var(--muted); text-decoration: none; }
+.nav-links a:hover { color: var(--ink); }
+.nav .cta-pill {
+  margin-left: auto; border-radius: 999px; background: var(--terracotta);
+  padding: 8px 16px; font-size: 14px; font-weight: 600; color: #F6F1E7; text-decoration: none;
+}
+@media (min-width: 860px) {
+  .nav-links { display: flex; }
+  .nav .cta-pill { margin-left: 0; }
+}
+
+/* --- Held --- */
+.hero { position: relative; padding-block: 88px 60px; }
+
+/* Bilder aus dem Netz: echte Begegnungen statt Ornament. Auf schmalen
+   Schirmen stehen sie unter dem Text, ab Tablet daneben. */
+.collage { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 44px; }
+.spalte { display: flex; flex-direction: column; gap: 14px; }
+.kachel {
+  display: block; width: 100%; height: auto; object-fit: cover;
+  border: 1px solid var(--line); border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(42, 40, 32, .10);
+}
+@media (prefers-color-scheme: dark) {
+  .kachel { box-shadow: 0 10px 30px rgba(0, 0, 0, .35); }
+}
+@media (min-width: 1024px) {
+  .hero {
+    display: grid; grid-template-columns: minmax(0, 1fr) 440px;
+    gap: 48px; align-items: center;
+  }
+  .collage { margin-top: 0; }
+  /* Die zweite Spalte laeuft versetzt - das Mosaik soll nicht als Raster lesen. */
+  .spalte-versetzt { margin-top: 40px; }
+}
+.hero-inner { position: relative; max-width: 780px; }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 9px;
+  border: 1px solid var(--line); border-radius: 999px; background: var(--surface);
+  padding: 6px 15px; font-size: 13.5px; font-weight: 600; color: var(--forest);
+}
+.eyebrow .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--sage); }
+h1 { margin-top: 24px; font-size: clamp(34px, 6vw, 60px); font-weight: 800; line-height: .96; letter-spacing: -0.035em; }
+h1 .accent { color: var(--terracotta); }
+.lede { margin-top: 24px; max-width: 33em; font-size: clamp(18px, 2.2vw, 21px); line-height: 1.55; color: var(--body); text-wrap: pretty; }
+.buttons { margin-top: 34px; display: flex; flex-wrap: wrap; gap: 13px; }
+.btn {
+  border-radius: 13px; padding: 15px 26px; font-size: 16px; font-weight: 600;
+  text-decoration: none; display: inline-block;
+}
+.btn-primary { background: var(--forest); color: var(--on-forest); }
+.btn-ghost { border: 1.5px solid var(--outline); color: var(--ink); }
+
+/* --- Abschnitte --- */
+section { padding-block: 64px 20px; }
+.kicker {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 13px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .14em; color: var(--terracotta);
+}
+.kicker .bar { width: 22px; height: 3px; border-radius: 2px; background: var(--ocker); }
+h2 { margin-top: 14px; font-size: clamp(30px, 4.4vw, 46px); font-weight: 800; line-height: 1.02; }
+.section-lede { margin-top: 16px; font-size: 18px; color: var(--body); }
+
+
+/* Die Einladung: sie soll auffordern, nicht erklaeren — darum wenig Text,
+   viel Luft und ein Knopf, der nicht zu uebersehen ist. */
+.einladung {
+  border: 1px solid var(--line); background: var(--surface);
+  border-radius: 28px; padding: 64px 48px; text-align: center;
+}
+.einladung h2 { font-size: clamp(36px, 6vw, 58px); }
+.einladung > p {
+  margin: 20px auto 32px; max-width: 30em;
+  font-size: clamp(18px, 2.2vw, 21px); line-height: 1.55; color: var(--body);
+  text-wrap: pretty;
+}
+.btn-eintreten {
+  background: var(--terracotta); color: #F6F1E7;
+  border-radius: 16px; padding: 18px 44px; font-size: 19px; font-weight: 700;
+}
+.einladung .einladung-fuss {
+  margin: 22px auto 0; max-width: 26em;
+  font-size: 14.5px; line-height: 1.5; color: var(--faint);
+}
+@media (max-width: 640px) { .einladung { padding: 44px 24px; } }
+
+/* Der Nordstern: fuenf Schritte, durch Farbe unterschieden statt durch Ornament. */
+
+.cards { display: grid; grid-template-columns: 1fr; gap: 18px; }
+@media (min-width: 640px) { .cards { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .cards { grid-template-columns: repeat(3, 1fr); } }
+.card { border: 1px solid var(--line); background: var(--surface); border-radius: 20px; padding: 28px; }
+.card .badge {
+  width: 50px; height: 50px; border-radius: 13px; display: grid; place-items: center;
+  margin-bottom: 16px; font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 19px; font-weight: 700;
+}
+.card h3 { font-size: 21px; font-weight: 700; }
+.card p { margin: 6px 0 0; font-size: 15px; line-height: 1.55; color: var(--muted); }
+.card-dark { border-color: var(--forest); background: var(--forest); }
+.card-dark h3 { color: var(--on-forest); }
+.card-dark p { color: color-mix(in srgb, var(--on-forest) 78%, transparent); }
+.card-dark .badge { background: rgba(255, 255, 255, .16); color: var(--on-forest); }
+
+/* --- Zitat --- */
+.quote {
+  position: relative; border: 1px solid var(--line); background: var(--surface);
+  border-radius: 24px; padding: 48px; text-align: center;
+}
+.quote blockquote {
+  margin: 0 auto; max-width: 40em;
+  font-family: "Spectral", Georgia, serif; font-style: italic; font-weight: 400;
+  font-size: clamp(22px, 3.2vw, 30px); line-height: 1.4; color: var(--forest);
+}
+.quote p { margin: 22px auto 0; max-width: 34em; font-size: 16.5px; line-height: 1.6; color: var(--body); }
+
+/* --- Einladungen --- */
+.quests { display: grid; grid-template-columns: 1fr; gap: 14px; }
+@media (min-width: 640px) { .quests { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .quests { grid-template-columns: repeat(3, 1fr); } }
+.quest {
+  display: flex; align-items: center; gap: 14px;
+  border: 1px solid var(--line); background: var(--surface);
+  border-radius: 14px; padding: 18px 20px;
+  font-size: 16px; font-weight: 600;
+}
+.quest .marker { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+.quests-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px; margin-bottom: 34px; }
+.quests-head p { max-width: 25em; margin: 0; font-size: 16px; color: var(--body); }
+
+/* --- Haltungen --- */
+.band { border-radius: 28px; background: var(--band-bg); padding: 56px 48px; border: 1px solid transparent; }
+.band h2 { max-width: 18em; color: var(--band-text); font-size: clamp(28px, 3.8vw, 40px); line-height: 1.04; }
+.band p { margin: 16px 0 28px; max-width: 34em; font-size: 16.5px; line-height: 1.6; color: var(--band-body); }
+.chips { display: flex; flex-wrap: wrap; gap: 11px; }
+.chip {
+  border: 1px solid var(--band-line); background: var(--band-surface);
+  border-radius: 999px; padding: 10px 18px;
+  font-size: 15px; font-weight: 600; color: var(--band-text);
+}
+
+/* --- Schluss --- */
+.closing { text-align: center; padding-bottom: 30px; }
+.closing h2 { font-size: clamp(32px, 5vw, 50px); }
+.closing p { margin: 18px auto 30px; max-width: 32em; font-size: 19px; color: var(--body); }
+.closing .buttons { justify-content: center; }
+.closing .btn { padding: 16px 30px; font-size: 17px; }
+.btn-brand { background: var(--terracotta); color: #F6F1E7; font-weight: 700; border-radius: 14px; }
+.closing .btn-ghost { border-radius: 14px; }
+
+footer { margin-top: 28px; }
+.footer-inner {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 20px; padding-block: 30px 60px;
+}
+.footer-note { max-width: 32em; text-align: right; font-size: 13.5px; color: var(--faint); }
+.footer-note a { color: var(--muted); }
+</style>
+</head>
+
+<body>
+
+<div class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#hero">
+      <span>reallife<em>.network</em></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#mitmachen">Mach mit</a>
+      <a href="#wachsen">So wächst es</a>
+      <a href="#einladungen">Einladungen</a>
+    </nav>
+    <a class="cta-pill" href="/app/">App öffnen</a>
+  </div>
+</div>
+
+<section class="wrap hero" id="hero">
+  <div class="hero-inner">
+    <div class="eyebrow"><span class="dot"></span>Ein lebendiges Geflecht aus Menschen</div>
+    <h1>Ein Netz wächst<br>aus echter <span class="accent">Begegnung</span></h1>
+    <p class="lede">
+      Das Reallife Network wächst dort, wo Menschen aufeinander zugehen — sich
+      kennenlernen, Vertrauen aufbauen, teilen und gemeinsam etwas Lebendiges
+      schaffen. Vor Ort, freiwillig, Beziehung für Beziehung.
+    </p>
+    <div class="buttons">
+      <a class="btn btn-primary" href="/app/">App öffnen</a>
+      <a class="btn btn-ghost" href="#wachsen">Wie das Netz wächst</a>
+    </div>
+  </div>
+
+  <!-- Vier Kacheln, gezogen aus sechs Bildern: drei quer, eine hoch. Die im
+       Markup stehende Auswahl gilt, wenn kein JavaScript laeuft - getauscht
+       wird gleich darunter. -->
+  <div class="collage">
+    <div class="spalte">
+      <img class="kachel" data-form="quer" src="/fotos/runde.webp" width="500" height="375"
+           fetchpriority="high" loading="eager" decoding="async"
+           alt="Mehrere Menschen sitzen um einen Tisch mit Laptops, im Hintergrund eine Tafel voller Notizzettel.">
+      <img class="kachel" data-form="quer" src="/fotos/zelt.webp" width="500" height="375"
+           loading="eager" decoding="async"
+           alt="Ein offenes Zelt im Camp, davor ein bemaltes Holzschild mit der Aufschrift &#8222;Life Network&#8220;.">
+    </div>
+    <div class="spalte spalte-versetzt">
+      <img class="kachel" data-form="hoch" src="/fotos/portraet.webp" width="440" height="590"
+           loading="eager" decoding="async"
+           alt="Eine Person mit Mikrofon vor einer Tafel mit Notizzetteln, lachend.">
+      <img class="kachel" data-form="quer" src="/fotos/abend.webp" width="500" height="375"
+           loading="eager" decoding="async"
+           alt="Das Camp im Abendlicht: Strohballen, Wohnmobile und Zelte vor untergehender Sonne.">
+    </div>
+  </div>
+
+  <script>
+  // Bei jedem Besuch eine andere Auswahl. Getrennt nach Format, damit das
+  // Mosaik seine Form behaelt: die hohe Kachel bekommt nie ein Querbild.
+  // Laeuft unmittelbar nach dem Markup, also bevor die Bilder geladen sind.
+  (function () {
+    var quer = [
+      ["runde",  "Mehrere Menschen sitzen um einen Tisch mit Laptops, im Hintergrund eine Tafel voller Notizzettel."],
+      ["zelt",   "Ein offenes Zelt im Camp, davor ein bemaltes Holzschild mit der Aufschrift \u201eLife Network\u201c."],
+      ["abend",  "Das Camp im Abendlicht: Strohballen, Wohnmobile und Zelte vor untergehender Sonne."],
+      ["sommer", "Ein Eindruck aus dem Netzwerk."]
+    ]
+    var hoch = [
+      ["portraet", "Eine Person mit Mikrofon vor einer Tafel mit Notizzetteln, lachend."],
+      ["rainbow",  "Ein Eindruck aus dem Netzwerk."]
+    ]
+
+    // Fisher-Yates auf einer Kopie: die Quelllisten bleiben unangetastet.
+    function gemischt(liste) {
+      var a = liste.slice()
+      for (var i = a.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1))
+        var t = a[i]; a[i] = a[j]; a[j] = t
+      }
+      return a
+    }
+
+    var vorrat = { quer: gemischt(quer), hoch: gemischt(hoch) }
+    var kacheln = document.querySelectorAll(".collage .kachel")
+    for (var i = 0; i < kacheln.length; i++) {
+      var bild = kacheln[i]
+      var wahl = vorrat[bild.dataset.form].pop()
+      if (!wahl) continue
+      bild.src = "/fotos/" + wahl[0] + ".webp"
+      bild.alt = wahl[1]
+    }
+  })()
+  </script>
+
+</section>
+
+<section class="wrap" id="mitmachen">
+  <div class="einladung">
+    <h2>Mach mit!</h2>
+    <p>
+      Du brauchst keine Erlaubnis und keinen Grund. Tritt ein, geh auf einen
+      Menschen zu, lade jemanden ein — und schau, was daraus wächst.
+    </p>
+    <a class="btn btn-eintreten" href="/app/">Eintreten</a>
+    <p class="einladung-fuss">
+      Dauert zwei Minuten. Deine Identität gehört dir allein —
+      kein Server, kein Anbieter.
+    </p>
+  </div>
+</section>
+
+<section class="wrap" id="wachsen">
+  <div style="max-width:42em;margin:0 auto 44px;text-align:center">
+    <div class="kicker"><span class="bar"></span>So wächst das Netz</div>
+    <h2>Sechs Wege, in Beziehung zu treten</h2>
+    <p class="section-lede">Lauter kleine, freiwillige Gesten. Jede knüpft einen neuen Faden ins Geflecht.</p>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <div class="badge" style="background:color-mix(in srgb, var(--sage) 18%, transparent);color:var(--sage)">1</div>
+      <h3>Begegnen</h3>
+      <p>Menschen kennenlernen, einander vorstellen, in Verbindung bleiben — wenn es sich stimmig anfühlt.</p>
+    </div>
+    <div class="card">
+      <div class="badge" style="background:color-mix(in srgb, var(--terracotta) 18%, transparent);color:var(--terracotta)">2</div>
+      <h3>Vertrauen</h3>
+      <p>Echte Begegnungen bestätigen. Jede Verbindung beruht auf einem realen Treffen, jede Anerkennung auf einer echten Tat.</p>
+    </div>
+    <div class="card">
+      <div class="badge" style="background:color-mix(in srgb, var(--ocker) 18%, transparent);color:var(--ocker)">3</div>
+      <h3>Zusammenkommen</h3>
+      <p>Gemeinsam essen, Vollmondfeuer, Redekreis, Workshop. Aus wiederkehrenden Treffen werden Kreise.</p>
+    </div>
+    <div class="card">
+      <div class="badge" style="background:color-mix(in srgb, var(--forest) 18%, transparent);color:var(--forest)">4</div>
+      <h3>Teilen</h3>
+      <p>Werkzeug, Raum, Wissen, Zeit anbieten und finden. Aus geteilten Ressourcen werden Commons.</p>
+    </div>
+    <div class="card">
+      <div class="badge" style="background:color-mix(in srgb, var(--sage) 18%, transparent);color:var(--sage)">5</div>
+      <h3>Gemeinsam handeln</h3>
+      <p>Ein erster Schritt, zusammen getan. Projekte starten, Orte gründen und pflegen — klein beginnen, lebendig wachsen.</p>
+    </div>
+    <div class="card card-dark">
+      <div class="badge">6</div>
+      <h3>Sichtbar machen</h3>
+      <p>Festhalten, was lebt — mit Zustimmung. Geschichten, Bilder, Orte. Damit andere lernen und andocken können.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="quote">
+    <blockquote>
+      „Jede Verbindung beruht auf einer persönlichen Begegnung.<br>
+      Jede Anerkennung auf einer echten Tat.“
+    </blockquote>
+    <p>
+      So entsteht ein Vertrauensgeflecht, das nicht gekauft, geliked oder
+      erzwungen werden kann — sondern nur gelebt. Niemand wird bewertet,
+      niemand gerankt. Sichtbar wird nur, was Menschen selbst sichtbar machen
+      möchten.
+    </p>
+  </div>
+</section>
+
+<section class="wrap" id="einladungen">
+  <div class="quests-head">
+    <div>
+      <div class="kicker"><span class="bar"></span>Einladungen</div>
+      <h2>Quests</h2>
+    </div>
+    <p>
+      Kleine Handlungseinladungen, die das Netz nähren. Frei anzunehmen, frei
+      abzulehnen — ganz ohne sozialen Druck. Es soll sich anfühlen wie ein
+      schönes Spiel.
+    </p>
+  </div>
+
+  <div class="quests">
+    <div class="quest"><span class="marker" style="background:var(--sage)"></span>Lerne eine neue Person kennen</div>
+    <div class="quest"><span class="marker" style="background:var(--ocker)"></span>Lade jemanden zum Essen ein</div>
+    <div class="quest"><span class="marker" style="background:var(--terracotta)"></span>Stelle zwei Menschen einander vor</div>
+    <div class="quest"><span class="marker" style="background:var(--forest)"></span>Teile eine Ressource</div>
+    <div class="quest"><span class="marker" style="background:var(--sage)"></span>Gründe mit 3–5 Menschen einen Kreis</div>
+    <div class="quest"><span class="marker" style="background:var(--ocker)"></span>Lade zum Vollmondfeuer ein</div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="band">
+    <h2>Wie wir miteinander knüpfen</h2>
+    <p>
+      Das Netz wächst durch Einladung, Beispiel und Erfahrung — nie durch Druck
+      oder Rekrutierung. Diese Haltungen tragen alles, was hier entsteht:
+    </p>
+    <div class="chips">
+      <span class="chip">Freiwilligkeit</span>
+      <span class="chip">Leichtigkeit</span>
+      <span class="chip">Beziehung vor Struktur</span>
+      <span class="chip">Lokale Autonomie</span>
+      <span class="chip">Commons statt Besitz</span>
+      <span class="chip">Einladung statt Missionierung</span>
+    </div>
+  </div>
+</section>
+
+<section class="wrap closing">
+  <h2>Knüpf mit am Netz</h2>
+  <p>
+    Du brauchst keine Erlaubnis. Fang dort an, wo du bist: Geh auf
+    einen Menschen zu. Lade jemanden ein. Teile etwas. Der Rest wächst von
+    selbst — die App hilft dir dabei, den Überblick zu behalten.
+  </p>
+  <div class="buttons">
+    <a class="btn btn-brand" href="/app/">App öffnen</a>
+    <a class="btn btn-ghost" href="#einladungen">Eine Einladung wählen</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <a class="brand" href="#hero">
+      <span style="font-size:16px">reallife<em>.network</em></span>
+    </a>
+    <div class="footer-note">
+      Ein lebendiges Geflecht aus echten Beziehungen — lokal verwurzelt,
+      freiwillig, von Hand geknüpft.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
