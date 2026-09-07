@@ -1,0 +1,66 @@
+<!-- @dsCard group="Components" -->
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karten, Zeilen, Kacheln — reallife.network</title>
+<link rel="stylesheet" href="../tokens/tokens.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Hanken+Grotesk:wght@100..900&family=Spectral:ital,wght@1,400&display=swap">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--cream); color: var(--ink);
+          font: 400 16px/1.6 var(--font-sans); -webkit-font-smoothing: antialiased; }
+  .blatt { padding: 40px; }
+  h1 { font-family: var(--font-display); font-size: 34px; font-weight: 800;
+        letter-spacing: -.03em; margin: 0 0 10px; }
+  .vorspann { max-width: 46em; margin: 0 0 28px; font-size: 15.5px; line-height: 1.6; color: var(--body); }
+  h2 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .14em;
+        color: var(--muted); margin: 30px 0 14px; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92em; }
+  .notiz { font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 11.5px; color: var(--faint); margin-top: 10px; }
+  a { color: var(--terracotta); } a:hover { color: var(--forest); }
+</style>
+</head>
+<body>
+<div class="blatt">
+<h1>Karten, Zeilen, Kacheln</h1>
+<p class="vorspann">Die Flächen, aus denen die Seite gebaut ist.</p>
+<h2>Wege-Karten</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px">
+    <div style="border:1px solid var(--line);background:var(--surface);border-radius:var(--radius-card);padding:28px">
+      <div style="width:50px;height:50px;border-radius:13px;display:grid;place-items:center;margin-bottom:16px;background:color-mix(in srgb, var(--sage) 18%, transparent);color:var(--sage);font-family:var(--font-display);font-size:19px;font-weight:700">1</div>
+      <div style="font-family:var(--font-display);font-size:21px;font-weight:700">Begegnen</div>
+      <div style="margin-top:6px;font-size:15px;line-height:1.55;color:var(--muted)">Menschen kennenlernen, einander vorstellen, in Verbindung bleiben.</div>
+    </div>
+    <div style="border:1px solid var(--line);background:var(--surface);border-radius:var(--radius-card);padding:28px">
+      <div style="width:50px;height:50px;border-radius:13px;display:grid;place-items:center;margin-bottom:16px;background:color-mix(in srgb, var(--terracotta) 18%, transparent);color:var(--terracotta);font-family:var(--font-display);font-size:19px;font-weight:700">2</div>
+      <div style="font-family:var(--font-display);font-size:21px;font-weight:700">Vertrauen</div>
+      <div style="margin-top:6px;font-size:15px;line-height:1.55;color:var(--muted)">Jede Verbindung beruht auf einem realen Treffen.</div>
+    </div>
+    <div style="border:1px solid var(--forest);background:var(--forest);border-radius:var(--radius-card);padding:28px">
+      <div style="width:50px;height:50px;border-radius:13px;display:grid;place-items:center;margin-bottom:16px;background:rgba(255,255,255,.16);color:var(--on-forest);font-family:var(--font-display);font-size:19px;font-weight:700">6</div>
+      <div style="font-family:var(--font-display);font-size:21px;font-weight:700;color:var(--on-forest)">Sichtbar machen</div>
+      <div style="margin-top:6px;font-size:15px;line-height:1.55;color:color-mix(in srgb, var(--on-forest) 78%, transparent)">Festhalten, was lebt — mit Zustimmung.</div>
+    </div>
+  </div>
+  <p class="notiz">Eine Karte je Reihe steht in <code>forest</code> — sie setzt den Akzent, ohne dass ein Ornament nötig wäre.</p>
+
+  <h2>Einladungszeilen</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px"><div style="display:flex;align-items:center;gap:14px;border:1px solid var(--line);background:var(--surface);border-radius:var(--radius-quest);padding:18px 20px;font-size:16px;font-weight:600">
+      <span style="width:10px;height:10px;border-radius:50%;flex:none;background:var(--sage)"></span>Lerne eine neue Person kennen</div><div style="display:flex;align-items:center;gap:14px;border:1px solid var(--line);background:var(--surface);border-radius:var(--radius-quest);padding:18px 20px;font-size:16px;font-weight:600">
+      <span style="width:10px;height:10px;border-radius:50%;flex:none;background:var(--ocker)"></span>Lade jemanden zum Essen ein</div><div style="display:flex;align-items:center;gap:14px;border:1px solid var(--line);background:var(--surface);border-radius:var(--radius-quest);padding:18px 20px;font-size:16px;font-weight:600">
+      <span style="width:10px;height:10px;border-radius:50%;flex:none;background:var(--terracotta)"></span>Stelle zwei Menschen einander vor</div>
+  </div>
+
+  <h2>Bildkacheln</h2>
+  <div style="display:flex;gap:14px;align-items:flex-start">
+    <div style="width:213px;height:160px;border-radius:var(--radius-tile);border:1px solid var(--line);background:linear-gradient(135deg,#D9CDB4,#B9A98A);box-shadow:var(--shadow-tile)"></div>
+    <div style="width:213px;height:285px;border-radius:var(--radius-tile);border:1px solid var(--line);background:linear-gradient(135deg,#C6BFA2,#9DA47E);box-shadow:var(--shadow-tile);margin-top:40px"></div>
+    <div style="width:213px;height:160px;border-radius:var(--radius-tile);border:1px solid var(--line);background:linear-gradient(135deg,#E0C79B,#C9A063);box-shadow:var(--shadow-tile)"></div>
+  </div>
+  <p class="notiz">Quer 4:3, hoch 3:4, zweite Spalte 40 px versetzt. Die Flächen hier sind Platzhalter — auf der Seite stehen Fotos echter Begegnungen, vier aus einem größeren Bestand, bei jedem Besuch neu gezogen.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!-- @dsCard group="Foundations" -->
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Typografie — reallife.network</title>
+<link rel="stylesheet" href="../tokens/tokens.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Hanken+Grotesk:wght@100..900&family=Spectral:ital,wght@1,400&display=swap">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--cream); color: var(--ink);
+          font: 400 16px/1.6 var(--font-sans); -webkit-font-smoothing: antialiased; }
+  .blatt { padding: 40px; }
+  h1 { font-family: var(--font-display); font-size: 34px; font-weight: 800;
+        letter-spacing: -.03em; margin: 0 0 10px; }
+  .vorspann { max-width: 46em; margin: 0 0 28px; font-size: 15.5px; line-height: 1.6; color: var(--body); }
+  h2 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .14em;
+        color: var(--muted); margin: 30px 0 14px; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92em; }
+  .notiz { font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 11.5px; color: var(--faint); margin-top: 10px; }
+  a { color: var(--terracotta); } a:hover { color: var(--forest); }
+</style>
+</head>
+<body>
+<div class="blatt">
+<h1>Typografie</h1>
+<p class="vorspann">Drei Schnitte, selbst gehostet — die Seite lädt keine Schrift von Dritten. Alle Größen sind clamp()-Werte, hier in ihrer oberen Stufe; auf schmalen Schirmen fällt jede eine Stufe kleiner aus.</p>
+<h2>Die drei Schnitte</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px">
+    <div style="border:1px solid var(--line);background:var(--surface);border-radius:var(--radius-tile);padding:20px">
+      <div style="font-family:var(--font-display);font-size:34px;font-weight:800;letter-spacing:-.03em">Aa</div>
+      <div style="margin-top:8px;font-size:14px;font-weight:600">Bricolage Grotesque</div>
+      <div class="notiz">200–800 · Überschriften, Wortmarke</div>
+    </div>
+    <div style="border:1px solid var(--line);background:var(--surface);border-radius:var(--radius-tile);padding:20px">
+      <div style="font-size:34px;font-weight:500">Aa</div>
+      <div style="margin-top:8px;font-size:14px;font-weight:600">Hanken Grotesk</div>
+      <div class="notiz">100–900 · Fließtext, Bedienelemente</div>
+    </div>
+    <div style="border:1px solid var(--line);background:var(--surface);border-radius:var(--radius-tile);padding:20px">
+      <div style="font-family:var(--font-quote);font-style:italic;font-size:34px">Aa</div>
+      <div style="margin-top:8px;font-size:14px;font-weight:600">Spectral</div>
+      <div class="notiz">kursiv 400 · nur das Zitat</div>
+    </div>
+  </div>
+
+  <h2>Die Leiter</h2>
+  <div>
+  <div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px;align-items:baseline;padding:18px 0;border-top:1px solid var(--line)">
+    <div class="notiz" style="margin:0">h1<br>clamp(34–60px)<br>800 · lh .96<br>ls −.035em</div>
+    <div><div style="font-family:var(--font-display);font-size:60px;font-weight:800;line-height:.96;letter-spacing:-.035em">Ein Netz wächst<br>aus echter <span style="color:var(--terracotta)">Begegnung</span></div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px;align-items:baseline;padding:18px 0;border-top:1px solid var(--line)">
+    <div class="notiz" style="margin:0">h2<br>clamp(30–46px)<br>800 · lh 1.02</div>
+    <div><div style="font-family:var(--font-display);font-size:46px;font-weight:800;line-height:1.02;letter-spacing:-.03em">Sechs Wege, in Beziehung zu treten</div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px;align-items:baseline;padding:18px 0;border-top:1px solid var(--line)">
+    <div class="notiz" style="margin:0">h2 · Einladung<br>clamp(36–58px)<br>800</div>
+    <div><div style="font-family:var(--font-display);font-size:58px;font-weight:800;line-height:1.02;letter-spacing:-.03em">Mach mit!</div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px;align-items:baseline;padding:18px 0;border-top:1px solid var(--line)">
+    <div class="notiz" style="margin:0">Vorspann<br>clamp(18–21px)<br>lh 1.55</div>
+    <div><div style="font-size:21px;line-height:1.55;color:var(--body);max-width:33em;text-wrap:pretty">Das Reallife Network wächst dort, wo Menschen aufeinander zugehen — sich kennenlernen, Vertrauen aufbauen, teilen.</div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px;align-items:baseline;padding:18px 0;border-top:1px solid var(--line)">
+    <div class="notiz" style="margin:0">Fließtext<br>16px · lh 1.6</div>
+    <div><div style="font-size:16px;line-height:1.6;color:var(--body);max-width:36em">Kleine Handlungseinladungen, die das Netz nähren. Frei anzunehmen, frei abzulehnen — ganz ohne sozialen Druck.</div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px;align-items:baseline;padding:18px 0;border-top:1px solid var(--line)">
+    <div class="notiz" style="margin:0">Karte<br>h3 21px · 700<br>Text 15px · lh 1.55</div>
+    <div><div><div style="font-family:var(--font-display);font-size:21px;font-weight:700">Zusammenkommen</div><div style="margin-top:6px;font-size:15px;line-height:1.55;color:var(--muted);max-width:30em">Gemeinsam essen, Vollmondfeuer, Redekreis, Workshop.</div></div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px;align-items:baseline;padding:18px 0;border-top:1px solid var(--line)">
+    <div class="notiz" style="margin:0">Kicker<br>13px · 700<br>ls .14em · Versal</div>
+    <div><div style="display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--terracotta)"><span style="width:22px;height:3px;border-radius:2px;background:var(--ocker)"></span>So wächst das Netz</div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px;align-items:baseline;padding:18px 0;border-top:1px solid var(--line)">
+    <div class="notiz" style="margin:0">Zitat<br>Spectral kursiv<br>clamp(22–30px)</div>
+    <div><div style="font-family:var(--font-quote);font-style:italic;font-size:30px;line-height:1.4;color:var(--forest);max-width:22em">„Jede Verbindung beruht auf einer persönlichen Begegnung."</div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px;align-items:baseline;padding:18px 0;border-top:1px solid var(--line)">
+    <div class="notiz" style="margin:0">Kleingedrucktes<br>14.5px · lh 1.5</div>
+    <div><div style="font-size:14.5px;line-height:1.5;color:var(--faint);max-width:26em">Dauert zwei Minuten. Deine Identität gehört dir allein — kein Server, kein Anbieter.</div></div>
+  </div>
+  </div>
+</div>
+</body>
+</html>

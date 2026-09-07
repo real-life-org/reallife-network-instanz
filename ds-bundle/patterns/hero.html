@@ -1,0 +1,70 @@
+<!-- @dsCard group="Patterns" -->
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hero — reallife.network</title>
+<link rel="stylesheet" href="../tokens/tokens.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Hanken+Grotesk:wght@100..900&family=Spectral:ital,wght@1,400&display=swap">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--cream); color: var(--ink);
+          font: 400 16px/1.6 var(--font-sans); -webkit-font-smoothing: antialiased; }
+  .blatt { padding: 40px; }
+  h1 { font-family: var(--font-display); font-size: 34px; font-weight: 800;
+        letter-spacing: -.03em; margin: 0 0 10px; }
+  .vorspann { max-width: 46em; margin: 0 0 28px; font-size: 15.5px; line-height: 1.6; color: var(--body); }
+  h2 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .14em;
+        color: var(--muted); margin: 30px 0 14px; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92em; }
+  .notiz { font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 11.5px; color: var(--faint); margin-top: 10px; }
+  a { color: var(--terracotta); } a:hover { color: var(--forest); }
+</style>
+</head>
+<body>
+<div class="blatt">
+<h1>Hero</h1>
+<p class="vorspann">Der Kopf der Landingpage: ein Versprechen, eine Hauptaktion, vier Bilder echter Begegnungen.</p>
+<div style="border:1px solid var(--line);border-radius:var(--radius-card);overflow:hidden">
+    <div style="border-bottom:1px solid var(--line);background:color-mix(in srgb, var(--cream) 80%, transparent);padding:14px 24px;display:flex;align-items:center;gap:26px">
+      <div style="font-family:var(--font-display);font-size:18px;font-weight:700;letter-spacing:-.02em">reallife<span style="color:var(--terracotta)">.network</span></div>
+      <div style="flex:1"></div>
+      <span style="font-size:14.5px;font-weight:500;color:var(--muted)">Mach mit</span>
+      <span style="font-size:14.5px;font-weight:500;color:var(--muted)">So wächst es</span>
+      <span style="background:var(--terracotta);color:#F6F1E7;border-radius:var(--radius-pill);padding:8px 16px;font-size:14px;font-weight:600">App öffnen</span>
+    </div>
+    <div style="padding:56px 24px;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:40px;align-items:center">
+      <div>
+        <div style="display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);background:var(--surface);border-radius:var(--radius-pill);padding:6px 15px;font-size:13.5px;font-weight:600;color:var(--forest)">
+          <span style="width:9px;height:9px;border-radius:50%;background:var(--sage)"></span>Ein lebendiges Geflecht aus Menschen
+        </div>
+        <div style="font-family:var(--font-display);font-size:52px;font-weight:800;line-height:.96;letter-spacing:-.035em;margin-top:22px">
+          Ein Netz wächst<br>aus echter <span style="color:var(--terracotta)">Begegnung</span>
+        </div>
+        <p style="margin-top:20px;max-width:33em;font-size:19px;line-height:1.55;color:var(--body);text-wrap:pretty">
+          Das Reallife Network wächst dort, wo Menschen aufeinander zugehen — sich kennenlernen,
+          Vertrauen aufbauen, teilen und gemeinsam etwas Lebendiges schaffen.
+        </p>
+        <div style="display:flex;gap:13px;margin-top:28px">
+          <span style="background:var(--forest);color:var(--on-forest);border-radius:var(--radius-control);padding:15px 26px;font-size:16px;font-weight:600">App öffnen</span>
+          <span style="border:1.5px solid var(--outline);border-radius:var(--radius-control);padding:15px 26px;font-size:16px;font-weight:600">Wie das Netz wächst</span>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div style="aspect-ratio:4/3;border-radius:var(--radius-tile);border:1px solid var(--line);background:linear-gradient(135deg,#D9CDB4,#B9A98A);box-shadow:var(--shadow-tile)"></div>
+          <div style="aspect-ratio:4/3;border-radius:var(--radius-tile);border:1px solid var(--line);background:linear-gradient(135deg,#E0C79B,#C9A063);box-shadow:var(--shadow-tile)"></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-top:32px">
+          <div style="aspect-ratio:3/4;border-radius:var(--radius-tile);border:1px solid var(--line);background:linear-gradient(135deg,#C6BFA2,#9DA47E);box-shadow:var(--shadow-tile)"></div>
+          <div style="aspect-ratio:4/3;border-radius:var(--radius-tile);border:1px solid var(--line);background:linear-gradient(135deg,#CDBFA3,#A89477);box-shadow:var(--shadow-tile)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="notiz">Text links, Bildmosaik rechts, ab 1024 px nebeneinander — darunter stehen die Bilder unter dem Text. Eine Hauptaktion, daneben der ruhige zweite Weg.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,176 @@
+/* reallife.network — Tokens
+ *
+ * Zwei Ebenen, bewusst getrennt:
+ *
+ *   --cream, --forest, --terracotta …   die Landingpage
+ *   --background, --primary, --card …   die App unter /app (Toolkit-Tokens)
+ *
+ * Die zweite Ebene ist keine zweite Palette: sie bildet dieselben Farben auf
+ * die Namen ab, die das Toolkit kennt. Quelle ist branding/theme.json — wer
+ * dort etwas ändert, erzeugt diese Datei neu.
+ *
+ * Jeder Name existiert in beiden Schemata. Ein nur hell definierter Wert wäre
+ * im Dunkeln ein Loch.
+ */
+
+:root {
+  /* --- Landingpage --- */
+  --cream: #F6F1E7;
+  --surface: #FCFAF4;
+  --line: #E6DCC8;
+  --ink: #2A2820;
+  --body: #4A463A;
+  --muted: #736C58;
+  --faint: #9A917A;
+  --outline: #CDBFA3;
+  --sage: #8C9A5B;
+  --ocker: #D89B36;
+  --terracotta: #C15F3C;
+  --forest: #3E5E2E;
+  --on-forest: #F6F1E7;
+  --band-bg: #20231B;
+  --band-surface: #2A2E23;
+  --band-line: #3D4233;
+  --band-text: #ECE6D6;
+  --band-body: #CDD6BB;
+
+  /* --- Form --- */
+  --radius-pill: 999px;
+  --radius-control: 13px;
+  --radius-quest: 14px;
+  --radius-cta: 16px;
+  --radius-tile: 18px;
+  --radius-card: 20px;
+  --radius-band: 28px;
+  --page-width: 1180px;
+  --shadow-tile: 0 10px 30px rgba(42, 40, 32, .10);
+
+  /* --- Schrift --- */
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-sans: "Hanken Grotesk", system-ui, sans-serif;
+  --font-quote: Spectral, Georgia, serif;
+
+  /* --- App (Toolkit) --- */
+  --background: #F6F1E7;
+  --foreground: #2A2820;
+  --card: #FCFAF4;
+  --card-foreground: #2A2820;
+  --popover: #FCFAF4;
+  --popover-foreground: #2A2820;
+  --primary: #3E5E2E;
+  --primary-foreground: #F6F1E7;
+  --secondary: #EDE6D4;
+  --secondary-foreground: #2A2820;
+  --muted: #EDE6D4;
+  --muted-foreground: #736C58;
+  --accent: #EFE7D3;
+  --accent-foreground: #2A2820;
+  --border: #E6DCC8;
+  --input: #E6DCC8;
+  --ring: #8C9A5B;
+  --warning: #D89B36;
+  --warning-foreground: #2A2820;
+  --chart-1: #8C9A5B;
+  --chart-2: #D89B36;
+  --chart-3: #C15F3C;
+  --chart-4: #3E5E2E;
+  --chart-5: #9A917A;
+  --sidebar: #FCFAF4;
+  --sidebar-foreground: #2A2820;
+  --sidebar-primary: #3E5E2E;
+  --sidebar-primary-foreground: #F6F1E7;
+  --sidebar-accent: #EFE7D3;
+  --sidebar-accent-foreground: #2A2820;
+  --sidebar-border: #E6DCC8;
+  --sidebar-ring: #8C9A5B;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cream: #20231B;
+    --surface: #2A2E23;
+    --line: #3D4233;
+    --ink: #ECE6D6;
+    --body: #C8C3AF;
+    --muted: #A39E89;
+    --faint: #8A8571;
+    --outline: #4A5040;
+    --sage: #A7B473;
+    --ocker: #E0AC55;
+    --terracotta: #DB7C58;
+    --forest: #6E9455;
+    --on-forest: #16180F;
+    --band-bg: #171A12;
+    --band-surface: #22261C;
+    --band-line: #363B2C;
+
+    --background: #20231B;
+    --foreground: #ECE6D6;
+    --card: #2A2E23;
+    --card-foreground: #ECE6D6;
+    --popover: #2A2E23;
+    --popover-foreground: #ECE6D6;
+    --primary: #8C9A5B;
+    --primary-foreground: #20231B;
+    --secondary: #3D4233;
+    --secondary-foreground: #ECE6D6;
+    --muted: #3D4233;
+    --muted-foreground: #A39E89;
+    --accent: #3D4233;
+    --accent-foreground: #ECE6D6;
+    --border: #3D4233;
+    --input: #3D4233;
+    --ring: #8C9A5B;
+    --warning: #D89B36;
+    --warning-foreground: #20231B;
+    --chart-1: #8C9A5B;
+    --chart-2: #D89B36;
+    --chart-3: #C15F3C;
+    --chart-4: #6E9455;
+    --chart-5: #A39E89;
+    --sidebar: #2A2E23;
+    --sidebar-foreground: #ECE6D6;
+    --sidebar-primary: #8C9A5B;
+    --sidebar-primary-foreground: #20231B;
+    --sidebar-accent: #3D4233;
+    --sidebar-accent-foreground: #ECE6D6;
+    --sidebar-border: #3D4233;
+    --sidebar-ring: #8C9A5B;
+  }
+}
+
+/* Die App schaltet ihren Dunkelmodus über die Klasse `dark`. */
+:root.dark {
+  --background: #20231B;
+  --foreground: #ECE6D6;
+  --card: #2A2E23;
+  --card-foreground: #ECE6D6;
+  --popover: #2A2E23;
+  --popover-foreground: #ECE6D6;
+  --primary: #8C9A5B;
+  --primary-foreground: #20231B;
+  --secondary: #3D4233;
+  --secondary-foreground: #ECE6D6;
+  --muted: #3D4233;
+  --muted-foreground: #A39E89;
+  --accent: #3D4233;
+  --accent-foreground: #ECE6D6;
+  --border: #3D4233;
+  --input: #3D4233;
+  --ring: #8C9A5B;
+  --warning: #D89B36;
+  --warning-foreground: #20231B;
+  --chart-1: #8C9A5B;
+  --chart-2: #D89B36;
+  --chart-3: #C15F3C;
+  --chart-4: #6E9455;
+  --chart-5: #A39E89;
+  --sidebar: #2A2E23;
+  --sidebar-foreground: #ECE6D6;
+  --sidebar-primary: #8C9A5B;
+  --sidebar-primary-foreground: #20231B;
+  --sidebar-accent: #3D4233;
+  --sidebar-accent-foreground: #ECE6D6;
+  --sidebar-border: #3D4233;
+  --sidebar-ring: #8C9A5B;
+}

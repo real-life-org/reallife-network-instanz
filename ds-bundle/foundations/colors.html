@@ -1,0 +1,402 @@
+<!-- @dsCard group="Foundations" -->
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Farben — reallife.network</title>
+<link rel="stylesheet" href="../tokens/tokens.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Hanken+Grotesk:wght@100..900&family=Spectral:ital,wght@1,400&display=swap">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--cream); color: var(--ink);
+          font: 400 16px/1.6 var(--font-sans); -webkit-font-smoothing: antialiased; }
+  .blatt { padding: 40px; }
+  h1 { font-family: var(--font-display); font-size: 34px; font-weight: 800;
+        letter-spacing: -.03em; margin: 0 0 10px; }
+  .vorspann { max-width: 46em; margin: 0 0 28px; font-size: 15.5px; line-height: 1.6; color: var(--body); }
+  h2 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .14em;
+        color: var(--muted); margin: 30px 0 14px; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92em; }
+  .notiz { font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 11.5px; color: var(--faint); margin-top: 10px; }
+  a { color: var(--terracotta); } a:hover { color: var(--forest); }
+</style>
+</head>
+<body>
+<div class="blatt">
+<h1>Farben</h1>
+<p class="vorspann">Eine warme, papierne Grundfläche und vier Farben aus der Knotengrafik. Die Landingpage führt eigene Namen; die App bekommt dieselben Werte über die Tokens des Toolkits.</p>
+<h2>Grundfläche und Schrift</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px 24px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="width:46px;height:46px;flex:none;border-radius:11px;background:var(--cream);border:1px solid var(--line)"></div>
+      <div style="min-width:0">
+        <div style="font-size:14px;font-weight:600">--cream</div>
+        <div class="notiz" style="margin-top:1px">Grundfläche der Seite</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="width:46px;height:46px;flex:none;border-radius:11px;background:var(--surface);border:1px solid var(--line)"></div>
+      <div style="min-width:0">
+        <div style="font-size:14px;font-weight:600">--surface</div>
+        <div class="notiz" style="margin-top:1px">Karten, Felder, Kacheln</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="width:46px;height:46px;flex:none;border-radius:11px;background:var(--line);border:1px solid var(--line)"></div>
+      <div style="min-width:0">
+        <div style="font-size:14px;font-weight:600">--line</div>
+        <div class="notiz" style="margin-top:1px">Ränder</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="width:46px;height:46px;flex:none;border-radius:11px;background:var(--ink);border:1px solid var(--line)"></div>
+      <div style="min-width:0">
+        <div style="font-size:14px;font-weight:600">--ink</div>
+        <div class="notiz" style="margin-top:1px">Überschriften</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="width:46px;height:46px;flex:none;border-radius:11px;background:var(--body);border:1px solid var(--line)"></div>
+      <div style="min-width:0">
+        <div style="font-size:14px;font-weight:600">--body</div>
+        <div class="notiz" style="margin-top:1px">Fließtext</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="width:46px;height:46px;flex:none;border-radius:11px;background:var(--muted);border:1px solid var(--line)"></div>
+      <div style="min-width:0">
+        <div style="font-size:14px;font-weight:600">--muted</div>
+        <div class="notiz" style="margin-top:1px">Nebentext</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="width:46px;height:46px;flex:none;border-radius:11px;background:var(--faint);border:1px solid var(--line)"></div>
+      <div style="min-width:0">
+        <div style="font-size:14px;font-weight:600">--faint</div>
+        <div class="notiz" style="margin-top:1px">Beiläufiges</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="width:46px;height:46px;flex:none;border-radius:11px;background:var(--outline);border:1px solid var(--line)"></div>
+      <div style="min-width:0">
+        <div style="font-size:14px;font-weight:600">--outline</div>
+        <div class="notiz" style="margin-top:1px">Rand des zweiten Knopfs</div>
+      </div>
+    </div>
+  </div>
+<h2>Marke</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px 24px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="width:46px;height:46px;flex:none;border-radius:11px;background:var(--forest);border:1px solid var(--line)"></div>
+      <div style="min-width:0">
+        <div style="font-size:14px;font-weight:600">--forest</div>
+        <div class="notiz" style="margin-top:1px">Hauptaktion</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="width:46px;height:46px;flex:none;border-radius:11px;background:var(--sage);border:1px solid var(--line)"></div>
+      <div style="min-width:0">
+        <div style="font-size:14px;font-weight:600">--sage</div>
+        <div class="notiz" style="margin-top:1px">Ruhiger Akzent</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="width:46px;height:46px;flex:none;border-radius:11px;background:var(--ocker);border:1px solid var(--line)"></div>
+      <div style="min-width:0">
+        <div style="font-size:14px;font-weight:600">--ocker</div>
+        <div class="notiz" style="margin-top:1px">Warnung, Wärme</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="width:46px;height:46px;flex:none;border-radius:11px;background:var(--terracotta);border:1px solid var(--line)"></div>
+      <div style="min-width:0">
+        <div style="font-size:14px;font-weight:600">--terracotta</div>
+        <div class="notiz" style="margin-top:1px">Marke, Einladung</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="width:46px;height:46px;flex:none;border-radius:11px;background:var(--on-forest);border:1px solid var(--line)"></div>
+      <div style="min-width:0">
+        <div style="font-size:14px;font-weight:600">--on-forest</div>
+        <div class="notiz" style="margin-top:1px">Schrift auf Forest</div>
+      </div>
+    </div>
+  </div>
+<h2>Dunkles Band</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px 24px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="width:46px;height:46px;flex:none;border-radius:11px;background:var(--band-bg);border:1px solid var(--line)"></div>
+      <div style="min-width:0">
+        <div style="font-size:14px;font-weight:600">--band-bg</div>
+        <div class="notiz" style="margin-top:1px">Fläche</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="width:46px;height:46px;flex:none;border-radius:11px;background:var(--band-surface);border:1px solid var(--line)"></div>
+      <div style="min-width:0">
+        <div style="font-size:14px;font-weight:600">--band-surface</div>
+        <div class="notiz" style="margin-top:1px">Chips darin</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="width:46px;height:46px;flex:none;border-radius:11px;background:var(--band-line);border:1px solid var(--line)"></div>
+      <div style="min-width:0">
+        <div style="font-size:14px;font-weight:600">--band-line</div>
+        <div class="notiz" style="margin-top:1px">Rand darin</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="width:46px;height:46px;flex:none;border-radius:11px;background:var(--band-text);border:1px solid var(--line)"></div>
+      <div style="min-width:0">
+        <div style="font-size:14px;font-weight:600">--band-text</div>
+        <div class="notiz" style="margin-top:1px">Schrift</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="width:46px;height:46px;flex:none;border-radius:11px;background:var(--band-body);border:1px solid var(--line)"></div>
+      <div style="min-width:0">
+        <div style="font-size:14px;font-weight:600">--band-body</div>
+        <div class="notiz" style="margin-top:1px">Fließtext</div>
+      </div>
+    </div>
+  </div>
+<h2>Tokens der App (Toolkit)</h2>
+  <table style="border-collapse:collapse;width:100%;max-width:640px">
+    <thead><tr>
+      <th style="text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--faint);padding-bottom:6px">Token</th>
+      <th style="text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--faint)">hell</th>
+      <th style="text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--faint)">dunkel</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--background</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#F6F1E7;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#F6F1E7</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#20231B;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#20231B</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--foreground</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#2A2820;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#2A2820</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#ECE6D6;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#ECE6D6</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--card</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#FCFAF4;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#FCFAF4</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#2A2E23;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#2A2E23</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--card-foreground</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#2A2820;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#2A2820</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#ECE6D6;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#ECE6D6</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--popover</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#FCFAF4;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#FCFAF4</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#2A2E23;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#2A2E23</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--popover-foreground</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#2A2820;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#2A2820</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#ECE6D6;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#ECE6D6</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--primary</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#3E5E2E;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#3E5E2E</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#8C9A5B;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#8C9A5B</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--primary-foreground</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#F6F1E7;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#F6F1E7</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#20231B;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#20231B</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--secondary</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#EDE6D4;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#EDE6D4</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#3D4233;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#3D4233</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--secondary-foreground</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#2A2820;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#2A2820</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#ECE6D6;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#ECE6D6</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--muted</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#EDE6D4;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#EDE6D4</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#3D4233;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#3D4233</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--muted-foreground</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#736C58;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#736C58</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#A39E89;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#A39E89</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--accent</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#EFE7D3;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#EFE7D3</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#3D4233;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#3D4233</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--accent-foreground</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#2A2820;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#2A2820</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#ECE6D6;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#ECE6D6</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--border</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#E6DCC8;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#E6DCC8</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#3D4233;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#3D4233</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--input</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#E6DCC8;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#E6DCC8</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#3D4233;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#3D4233</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--ring</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#8C9A5B;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#8C9A5B</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#8C9A5B;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#8C9A5B</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--warning</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#D89B36;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#D89B36</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#D89B36;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#D89B36</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--warning-foreground</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#2A2820;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#2A2820</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#20231B;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#20231B</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--chart-1</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#8C9A5B;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#8C9A5B</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#8C9A5B;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#8C9A5B</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--chart-2</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#D89B36;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#D89B36</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#D89B36;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#D89B36</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--chart-3</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#C15F3C;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#C15F3C</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#C15F3C;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#C15F3C</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--chart-4</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#3E5E2E;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#3E5E2E</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#6E9455;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#6E9455</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--chart-5</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#9A917A;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#9A917A</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#A39E89;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#A39E89</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--sidebar</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#FCFAF4;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#FCFAF4</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#2A2E23;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#2A2E23</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--sidebar-foreground</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#2A2820;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#2A2820</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#ECE6D6;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#ECE6D6</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--sidebar-primary</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#3E5E2E;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#3E5E2E</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#8C9A5B;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#8C9A5B</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--sidebar-primary-foreground</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#F6F1E7;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#F6F1E7</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#20231B;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#20231B</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--sidebar-accent</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#EFE7D3;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#EFE7D3</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#3D4233;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#3D4233</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--sidebar-accent-foreground</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#2A2820;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#2A2820</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#ECE6D6;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#ECE6D6</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--sidebar-border</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#E6DCC8;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#E6DCC8</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#3D4233;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#3D4233</code></td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0;font-size:13.5px;font-weight:600">--sidebar-ring</td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#8C9A5B;border:1px solid var(--line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#8C9A5B</code></td>
+        <td style="padding:6px 10px"><span style="display:inline-block;width:20px;height:20px;border-radius:5px;background:#8C9A5B;border:1px solid var(--band-line);vertical-align:middle"></span>
+          <code style="color:var(--muted)">#8C9A5B</code></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="notiz">Erzeugt aus branding/theme.json. Ein Name, den das Toolkit nicht kennt, wird verworfen und in der Konsole gemeldet.</p>
+</div>
+</body>
+</html>
