@@ -1,0 +1,326 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Hanken+Grotesk:wght@100..900&display=swap">
+  <style>
+    body { margin: 0; font-family: "Hanken Grotesk", system-ui, sans-serif; }
+    a { color: #C15F3C; } a:hover { color: #8f4327; }
+  </style>
+</helmet>
+<div style="background: #F6F1E7; color: #2A2820; padding: 48px 48px 44px; box-sizing: border-box; min-height: 100%">
+  <h2 style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 38px; font-weight: 800; letter-spacing: -0.03em; margin: 0">Farben</h2>
+  <p style="max-width: 40em; margin: 12px 0 0; font-size: 16px; line-height: 1.6; color: #4A463A">
+    Die Seite führt ihre eigenen Namen; die App bekommt dieselben Werte über
+    die Tokens des Toolkits (eigene Tafel). Jeder Name existiert in beiden
+    Schemata — ein nur hell definierter Wert wäre im Dunkeln ein Loch.
+  </p>
+    <div style="margin-top: 30px">
+      <div style="font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; color: #736C58; margin-bottom: 14px">Grundfläche und Schrift</div>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 26px">
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #F6F1E7; border: 1px solid #E6DCC8"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #2A2820">--cream</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #736C58">#F6F1E7</div>
+          <div style="font-size: 12px; color: #736C58; margin-top: 2px">Grundfläche der Seite</div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #FCFAF4; border: 1px solid #E6DCC8"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #2A2820">--surface</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #736C58">#FCFAF4</div>
+          <div style="font-size: 12px; color: #736C58; margin-top: 2px">Karten, Felder, Kacheln</div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #E6DCC8; border: 1px solid #E6DCC8"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #2A2820">--line</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #736C58">#E6DCC8</div>
+          <div style="font-size: 12px; color: #736C58; margin-top: 2px">Ränder</div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #2A2820; border: 1px solid #E6DCC8"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #2A2820">--ink</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #736C58">#2A2820</div>
+          <div style="font-size: 12px; color: #736C58; margin-top: 2px">Überschriften, harte Schrift</div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #4A463A; border: 1px solid #E6DCC8"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #2A2820">--body</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #736C58">#4A463A</div>
+          <div style="font-size: 12px; color: #736C58; margin-top: 2px">Fließtext</div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #736C58; border: 1px solid #E6DCC8"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #2A2820">--muted</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #736C58">#736C58</div>
+          <div style="font-size: 12px; color: #736C58; margin-top: 2px">Nebentext</div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #9A917A; border: 1px solid #E6DCC8"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #2A2820">--faint</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #736C58">#9A917A</div>
+          <div style="font-size: 12px; color: #736C58; margin-top: 2px">Fußzeile, Beiläufiges</div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #CDBFA3; border: 1px solid #E6DCC8"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #2A2820">--outline</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #736C58">#CDBFA3</div>
+          <div style="font-size: 12px; color: #736C58; margin-top: 2px">Rand des zweiten Knopfs</div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div style="margin-top: 30px">
+      <div style="font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; color: #736C58; margin-bottom: 14px">Marke</div>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 26px">
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #3E5E2E; border: 1px solid #E6DCC8"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #2A2820">--forest</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #736C58">#3E5E2E</div>
+          <div style="font-size: 12px; color: #736C58; margin-top: 2px">Hauptaktion</div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #8C9A5B; border: 1px solid #E6DCC8"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #2A2820">--sage</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #736C58">#8C9A5B</div>
+          <div style="font-size: 12px; color: #736C58; margin-top: 2px">Ruhiger Akzent</div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #D89B36; border: 1px solid #E6DCC8"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #2A2820">--ocker</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #736C58">#D89B36</div>
+          <div style="font-size: 12px; color: #736C58; margin-top: 2px">Warnung, Wärme</div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #C15F3C; border: 1px solid #E6DCC8"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #2A2820">--terracotta</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #736C58">#C15F3C</div>
+          <div style="font-size: 12px; color: #736C58; margin-top: 2px">Marke, Einladung</div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #F6F1E7; border: 1px solid #E6DCC8"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #2A2820">--on-forest</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #736C58">#F6F1E7</div>
+          <div style="font-size: 12px; color: #736C58; margin-top: 2px">Schrift auf Forest</div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div style="margin-top: 30px">
+      <div style="font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; color: #736C58; margin-bottom: 14px">Dunkles Band (gilt in beiden Schemata)</div>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 26px">
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #20231B; border: 1px solid #E6DCC8"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #2A2820">--band-bg</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #736C58">#20231B</div>
+          <div style="font-size: 12px; color: #736C58; margin-top: 2px">Dunkles Band</div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #2A2E23; border: 1px solid #E6DCC8"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #2A2820">--band-surface</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #736C58">#2A2E23</div>
+          <div style="font-size: 12px; color: #736C58; margin-top: 2px">Chips im Band</div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #3D4233; border: 1px solid #E6DCC8"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #2A2820">--band-line</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #736C58">#3D4233</div>
+          <div style="font-size: 12px; color: #736C58; margin-top: 2px">Rand im Band</div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #ECE6D6; border: 1px solid #E6DCC8"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #2A2820">--band-text</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #736C58">#ECE6D6</div>
+          <div style="font-size: 12px; color: #736C58; margin-top: 2px">Schrift im Band</div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #CDD6BB; border: 1px solid #E6DCC8"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #2A2820">--band-body</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #736C58">#CDD6BB</div>
+          <div style="font-size: 12px; color: #736C58; margin-top: 2px">Fließtext im Band</div>
+        </div>
+      </div>
+      </div>
+    </div>
+</div>
+
+<div style="background: #20231B; color: #ECE6D6; padding: 44px 48px; box-sizing: border-box">
+  <div style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 26px; font-weight: 800; letter-spacing: -0.03em">Dunkelmodus</div>
+  <p style="max-width: 40em; margin: 10px 0 0; font-size: 15px; line-height: 1.6; color: #C8C3AF">
+    Dieselben Namen, gespiegelte Rollen: <code style="font-family: ui-monospace, monospace">--cream</code> wird zur dunklen
+    Grundfläche, die vier Markenfarben werden heller, damit sie darauf tragen.
+  </p>
+    <div style="margin-top: 30px">
+      <div style="font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; color: #A39E89; margin-bottom: 14px">Werte unter prefers-color-scheme: dark</div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px 26px">
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #20231B; border: 1px solid #3D4233"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #ECE6D6">--cream</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #A39E89">#20231B</div>
+          
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #2A2E23; border: 1px solid #3D4233"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #ECE6D6">--surface</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #A39E89">#2A2E23</div>
+          
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #3D4233; border: 1px solid #3D4233"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #ECE6D6">--line</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #A39E89">#3D4233</div>
+          
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #ECE6D6; border: 1px solid #3D4233"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #ECE6D6">--ink</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #A39E89">#ECE6D6</div>
+          
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #C8C3AF; border: 1px solid #3D4233"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #ECE6D6">--body</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #A39E89">#C8C3AF</div>
+          
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #A39E89; border: 1px solid #3D4233"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #ECE6D6">--muted</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #A39E89">#A39E89</div>
+          
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #8A8571; border: 1px solid #3D4233"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #ECE6D6">--faint</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #A39E89">#8A8571</div>
+          
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #4A5040; border: 1px solid #3D4233"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #ECE6D6">--outline</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #A39E89">#4A5040</div>
+          
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #6E9455; border: 1px solid #3D4233"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #ECE6D6">--forest</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #A39E89">#6E9455</div>
+          
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #A7B473; border: 1px solid #3D4233"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #ECE6D6">--sage</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #A39E89">#A7B473</div>
+          
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #E0AC55; border: 1px solid #3D4233"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #ECE6D6">--ocker</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #A39E89">#E0AC55</div>
+          
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #DB7C58; border: 1px solid #3D4233"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #ECE6D6">--terracotta</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #A39E89">#DB7C58</div>
+          
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #16180F; border: 1px solid #3D4233"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #ECE6D6">--on-forest</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #A39E89">#16180F</div>
+          
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #171A12; border: 1px solid #3D4233"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #ECE6D6">--band-bg</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #A39E89">#171A12</div>
+          
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #22261C; border: 1px solid #3D4233"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #ECE6D6">--band-surface</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #A39E89">#22261C</div>
+          
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div style="width: 46px; height: 46px; flex: none; border-radius: 11px; background: #363B2C; border: 1px solid #3D4233"></div>
+        <div style="min-width: 0">
+          <div style="font-size: 14.5px; font-weight: 600; color: #ECE6D6">--band-line</div>
+          <div style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #A39E89">#363B2C</div>
+          
+        </div>
+      </div>
+      </div>
+    </div>
+</div>
+</x-dc>
+</body>
+</html>

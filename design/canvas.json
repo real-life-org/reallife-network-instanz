@@ -1,0 +1,14 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html",        "x": 0,    "y": 0,    "w": 1000, "h": 720 },
+    { "file": "Farben.dc.html",      "x": 1100, "y": 0,    "w": 1080, "h": 1180 },
+    { "file": "Typografie.dc.html",  "x": 0,    "y": 840,  "w": 1000, "h": 1240 },
+    { "file": "Komponenten.dc.html", "x": 1100, "y": 1300, "w": 1080, "h": 1320 },
+    { "file": "AppTokens.dc.html",   "x": 0,    "y": 2200, "w": 1000, "h": 1080 }
+  ],
+  "annotations": [
+    { "id": "quelle", "x": 0, "y": -140, "w": 420,
+      "text": "Alle Werte stammen aus der laufenden Seite:\nlanding/index.html und branding/theme.json.\nDie Tafel „Tokens der App\" ist aus der JSON erzeugt." }
+  ],
+  "launch": { "view": "canvas" }
+}

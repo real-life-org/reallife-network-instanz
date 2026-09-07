@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Hanken+Grotesk:wght@100..900&display=swap">
+  <style>
+    body { margin: 0; font-family: "Hanken Grotesk", system-ui, sans-serif; }
+    a { color: #C15F3C; } a:hover { color: #8f4327; }
+    .gruppe { padding: 26px 0; border-top: 1px solid #E6DCC8; }
+    .titel { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; color: #736C58; margin-bottom: 16px; }
+    .meta { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #9A917A; margin-top: 10px; }
+  </style>
+</helmet>
+
+<div style="background: #F6F1E7; color: #2A2820; padding: 48px; box-sizing: border-box; min-height: 100%">
+
+  <h2 style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 38px; font-weight: 800; letter-spacing: -0.03em; margin: 0">Komponenten</h2>
+  <p style="max-width: 42em; margin: 12px 0 0; font-size: 16px; line-height: 1.6; color: #4A463A">
+    Alle Radien, Polster und Ränder wie in der Seite. Der Rhythmus ist
+    durchgehend: 13–18 px Radius bei Bedienelementen, 20 px bei Karten,
+    28 px bei Bändern, 999 px bei allem Pillenförmigen.
+  </p>
+
+  <div class="gruppe">
+    <div class="titel">Knöpfe</div>
+    <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center">
+      <span style="background: #3E5E2E; color: #F6F1E7; border-radius: 13px; padding: 15px 26px; font-size: 16px; font-weight: 600">App öffnen</span>
+      <span style="border: 1.5px solid #CDBFA3; color: #2A2820; border-radius: 13px; padding: 15px 26px; font-size: 16px; font-weight: 600">Wie das Netz wächst</span>
+      <span style="background: #C15F3C; color: #F6F1E7; border-radius: 16px; padding: 18px 44px; font-size: 19px; font-weight: 700">Eintreten</span>
+      <span style="background: #C15F3C; color: #F6F1E7; border-radius: 999px; padding: 8px 16px; font-size: 14px; font-weight: 600">App öffnen</span>
+    </div>
+    <div class="meta">primär forest · zweitrangig outline 1.5px · Einladung terracotta 16px/44px · Kopfzeile pill</div>
+  </div>
+
+  <div class="gruppe">
+    <div class="titel">Karten</div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px">
+      <div style="border: 1px solid #E6DCC8; background: #FCFAF4; border-radius: 20px; padding: 28px">
+        <div style="width: 50px; height: 50px; border-radius: 13px; display: grid; place-items: center; margin-bottom: 16px; background: rgba(140,154,91,.18); color: #8C9A5B; font-family: 'Bricolage Grotesque', sans-serif; font-size: 19px; font-weight: 700">1</div>
+        <div style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 21px; font-weight: 700">Begegnen</div>
+        <div style="margin-top: 6px; font-size: 15px; line-height: 1.55; color: #736C58">Menschen kennenlernen, einander vorstellen, in Verbindung bleiben.</div>
+      </div>
+      <div style="border: 1px solid #E6DCC8; background: #FCFAF4; border-radius: 20px; padding: 28px">
+        <div style="width: 50px; height: 50px; border-radius: 13px; display: grid; place-items: center; margin-bottom: 16px; background: rgba(193,95,60,.18); color: #C15F3C; font-family: 'Bricolage Grotesque', sans-serif; font-size: 19px; font-weight: 700">2</div>
+        <div style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 21px; font-weight: 700">Vertrauen</div>
+        <div style="margin-top: 6px; font-size: 15px; line-height: 1.55; color: #736C58">Jede Verbindung beruht auf einem realen Treffen.</div>
+      </div>
+      <div style="border: 1px solid #3E5E2E; background: #3E5E2E; border-radius: 20px; padding: 28px">
+        <div style="width: 50px; height: 50px; border-radius: 13px; display: grid; place-items: center; margin-bottom: 16px; background: rgba(255,255,255,.16); color: #F6F1E7; font-family: 'Bricolage Grotesque', sans-serif; font-size: 19px; font-weight: 700">6</div>
+        <div style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 21px; font-weight: 700; color: #F6F1E7">Sichtbar machen</div>
+        <div style="margin-top: 6px; font-size: 15px; line-height: 1.55; color: rgba(246,241,231,.78)">Festhalten, was lebt — mit Zustimmung.</div>
+      </div>
+    </div>
+    <div class="meta">radius 20px · polster 28px · Zähler 50px/13px · eine Karte je Reihe in forest gesetzt</div>
+  </div>
+
+  <div class="gruppe">
+    <div class="titel">Zeilen, Pillen, Marken</div>
+    <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center">
+      <span style="display: inline-flex; align-items: center; gap: 9px; border: 1px solid #E6DCC8; background: #FCFAF4; border-radius: 999px; padding: 6px 15px; font-size: 13.5px; font-weight: 600; color: #3E5E2E">
+        <span style="width: 9px; height: 9px; border-radius: 50%; background: #8C9A5B"></span>Ein lebendiges Geflecht aus Menschen
+      </span>
+      <span style="display: inline-flex; align-items: center; gap: 14px; border: 1px solid #E6DCC8; background: #FCFAF4; border-radius: 14px; padding: 18px 20px; font-size: 16px; font-weight: 600">
+        <span style="width: 10px; height: 10px; border-radius: 50%; background: #D89B36"></span>Lade jemanden zum Essen ein
+      </span>
+    </div>
+    <div class="meta">Auszeichnung 999px · Einladungszeile radius 14px · farbiger Punkt statt Ornament</div>
+  </div>
+
+  <div class="gruppe">
+    <div class="titel">Bildkachel</div>
+    <div style="display: flex; gap: 14px; align-items: flex-start">
+      <div style="width: 213px; height: 160px; border-radius: 18px; border: 1px solid #E6DCC8; background: linear-gradient(135deg, #D9CDB4, #B9A98A); box-shadow: 0 10px 30px rgba(42,40,32,.10)"></div>
+      <div style="width: 213px; height: 285px; border-radius: 18px; border: 1px solid #E6DCC8; background: linear-gradient(135deg, #C6BFA2, #9DA47E); box-shadow: 0 10px 30px rgba(42,40,32,.10); margin-top: 40px"></div>
+      <div style="width: 213px; height: 160px; border-radius: 18px; border: 1px solid #E6DCC8; background: linear-gradient(135deg, #E0C79B, #C9A063); box-shadow: 0 10px 30px rgba(42,40,32,.10)"></div>
+    </div>
+    <div class="meta">radius 18px · schatten 0 10px 30px rgba(42,40,32,.10) · zweite Spalte 40px versetzt · quer 4:3, hoch 3:4</div>
+  </div>
+
+  <div class="gruppe">
+    <div class="titel">Dunkles Band</div>
+    <div style="border-radius: 28px; background: #20231B; padding: 36px 32px">
+      <div style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 30px; font-weight: 800; line-height: 1.04; letter-spacing: -0.03em; color: #ECE6D6">Wie wir miteinander knüpfen</div>
+      <div style="display: flex; flex-wrap: wrap; gap: 11px; margin-top: 20px">
+        <span style="border: 1px solid #3D4233; background: #2A2E23; border-radius: 999px; padding: 10px 18px; font-size: 15px; font-weight: 600; color: #ECE6D6">Freiwilligkeit</span>
+        <span style="border: 1px solid #3D4233; background: #2A2E23; border-radius: 999px; padding: 10px 18px; font-size: 15px; font-weight: 600; color: #ECE6D6">Leichtigkeit</span>
+        <span style="border: 1px solid #3D4233; background: #2A2E23; border-radius: 999px; padding: 10px 18px; font-size: 15px; font-weight: 600; color: #ECE6D6">Beziehung vor Struktur</span>
+      </div>
+    </div>
+    <div class="meta">radius 28px · im Dunkelmodus zusätzlich 1px band-line, sonst steht es auf dem Seitengrund</div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
