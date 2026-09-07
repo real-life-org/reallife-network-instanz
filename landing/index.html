@@ -303,22 +303,24 @@ footer { margin-top: 28px; }
        Markup stehende Auswahl gilt, wenn kein JavaScript laeuft - getauscht
        wird gleich darunter. -->
   <div class="collage">
+    <!-- KACHELN-ANFANG (erzeugt von scripts/fotos-aufbereiten.py) -->
     <div class="spalte">
-      <img class="kachel" data-form="quer" src="/fotos/runde.webp" width="500" height="375"
+      <img class="kachel" data-form="quer" src="/fotos/photo-2023-07-09-15-06-00.webp" width="500" height="375"
            fetchpriority="high" loading="eager" decoding="async"
-           alt="Mehrere Menschen sitzen um einen Tisch mit Laptops, im Hintergrund eine Tafel voller Notizzettel.">
-      <img class="kachel" data-form="quer" src="/fotos/zelt.webp" width="500" height="375"
+           alt="Ein Eindruck aus dem Netzwerk.">
+      <img class="kachel" data-form="quer" src="/fotos/photo-2024-09-01-16-54-11.webp" width="500" height="375"
            loading="eager" decoding="async"
-           alt="Ein offenes Zelt im Camp, davor ein bemaltes Holzschild mit der Aufschrift &#8222;Life Network&#8220;.">
+           alt="Ein Eindruck aus dem Netzwerk.">
     </div>
     <div class="spalte spalte-versetzt">
-      <img class="kachel" data-form="hoch" src="/fotos/portraet.webp" width="440" height="590"
+      <img class="kachel" data-form="hoch" src="/fotos/photo-2025-09-03-21-58-45.webp" width="440" height="590"
            loading="eager" decoding="async"
-           alt="Eine Person mit Mikrofon vor einer Tafel mit Notizzetteln, lachend.">
-      <img class="kachel" data-form="quer" src="/fotos/abend.webp" width="500" height="375"
+           alt="Ein Eindruck aus dem Netzwerk.">
+      <img class="kachel" data-form="quer" src="/fotos/runde.webp" width="500" height="375"
            loading="eager" decoding="async"
-           alt="Das Camp im Abendlicht: Strohballen, Wohnmobile und Zelte vor untergehender Sonne.">
+           alt="Mehrere Menschen sitzen um einen Tisch mit Laptops, im Hintergrund eine Tafel voller Notizzettel.">
     </div>
+    <!-- KACHELN-ENDE -->
   </div>
 
   <script>
@@ -326,16 +328,21 @@ footer { margin-top: 28px; }
   // Mosaik seine Form behaelt: die hohe Kachel bekommt nie ein Querbild.
   // Laeuft unmittelbar nach dem Markup, also bevor die Bilder geladen sind.
   (function () {
+    // BILDER-ANFANG (erzeugt von scripts/fotos-aufbereiten.py)
     var quer = [
-      ["runde",  "Mehrere Menschen sitzen um einen Tisch mit Laptops, im Hintergrund eine Tafel voller Notizzettel."],
-      ["zelt",   "Ein offenes Zelt im Camp, davor ein bemaltes Holzschild mit der Aufschrift \u201eLife Network\u201c."],
-      ["abend",  "Das Camp im Abendlicht: Strohballen, Wohnmobile und Zelte vor untergehender Sonne."],
-      ["sommer", "Ein Eindruck aus dem Netzwerk."]
+      ["photo-2023-07-09-15-06-00", "Ein Eindruck aus dem Netzwerk."],
+      ["photo-2024-09-01-16-54-11", "Ein Eindruck aus dem Netzwerk."],
+      ["runde", "Mehrere Menschen sitzen um einen Tisch mit Laptops, im Hintergrund eine Tafel voller Notizzettel."],
+      ["zelt", "Ein offenes Zelt im Camp, davor ein bemaltes Holzschild mit der Aufschrift \u201eLife Network\u201c."],
+      ["abend", "Das Camp im Abendlicht: Strohballen, Wohnmobile und Zelte vor untergehender Sonne."],
+      ["signal-2026-09-08-01-00-32-889", "Ein Eindruck aus dem Netzwerk."],
+      ["signal-2026-09-08-01-02-21-639", "Ein Eindruck aus dem Netzwerk."]
     ]
     var hoch = [
-      ["portraet", "Eine Person mit Mikrofon vor einer Tafel mit Notizzetteln, lachend."],
-      ["rainbow",  "Ein Eindruck aus dem Netzwerk."]
+      ["photo-2025-09-03-21-58-45", "Ein Eindruck aus dem Netzwerk."],
+      ["portraet", "Eine Person mit Mikrofon vor einer Tafel mit Notizzetteln, lachend."]
     ]
+    // BILDER-ENDE
 
     // Fisher-Yates auf einer Kopie: die Quelllisten bleiben unangetastet.
     function gemischt(liste) {

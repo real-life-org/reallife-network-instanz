@@ -1,0 +1,21 @@
+{
+  "_hinweis": "Zuordnung Quelldatei -> Name in der Auslieferung und Alt-Text. Wer ein Bild ergaenzt, traegt hier den Alt-Text nach; ohne Eintrag nimmt das Skript einen unspezifischen Text und meldet es.",
+  "bilder": {
+    "signal-2026-09-07-10-48-13-805.jpg": {
+      "name": "runde",
+      "alt": "Mehrere Menschen sitzen um einen Tisch mit Laptops, im Hintergrund eine Tafel voller Notizzettel."
+    },
+    "signal-2026-09-08-00-31-53-900_002.jpg": {
+      "name": "zelt",
+      "alt": "Ein offenes Zelt im Camp, davor ein bemaltes Holzschild mit der Aufschrift „Life Network“."
+    },
+    "signal-2026-09-08-00-31-53-900_005.jpg": {
+      "name": "abend",
+      "alt": "Das Camp im Abendlicht: Strohballen, Wohnmobile und Zelte vor untergehender Sonne."
+    },
+    "signal-2026-09-08-00-31-11-748.jpg": {
+      "name": "portraet",
+      "alt": "Eine Person mit Mikrofon vor einer Tafel mit Notizzetteln, lachend."
+    }
+  }
+}
