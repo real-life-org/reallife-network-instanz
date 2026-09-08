@@ -192,6 +192,22 @@ h2 { margin-top: 14px; font-size: clamp(30px, 4.4vw, 46px); font-weight: 800; li
   margin: 22px auto 0; max-width: 26em;
   font-size: 14.5px; line-height: 1.5; color: var(--faint);
 }
+
+/* Der Weg aufs Telefon steht neben der Hauptaktion, nicht neben ihr in
+   gleicher Groesse: eine Flaeche, ein Knopf. */
+.android {
+  display: inline-flex; align-items: center; gap: 9px;
+  margin-top: 26px; padding: 11px 18px;
+  border: 1px solid var(--line); border-radius: 999px;
+  background: var(--cream);
+  font-size: 15px; font-weight: 600; color: var(--ink); text-decoration: none;
+}
+.android:hover { border-color: var(--outline); }
+.android svg { width: 18px; height: 18px; flex: none; }
+.android-hinweis {
+  margin: 12px auto 0; max-width: 30em;
+  font-size: 13px; line-height: 1.5; color: var(--faint);
+}
 @media (max-width: 640px) { .einladung { padding: 44px 24px; } }
 
 /* Der Nordstern: fuenf Schritte, durch Farbe unterschieden statt durch Ornament. */
@@ -379,6 +395,20 @@ footer { margin-top: 28px; }
     <p class="einladung-fuss">
       Dauert zwei Minuten. Deine Identität gehört dir allein —
       kein Server, kein Anbieter.
+    </p>
+
+    <a class="android" href="https://github.com/real-life-org/real-life-stack/releases/download/app-v0.2.3/org.reallife.reallifestack_203.apk">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 3v12"></path>
+        <path d="m7 10 5 5 5-5"></path>
+        <path d="M4 20h16"></path>
+      </svg>
+      Android-App herunterladen
+    </a>
+    <p class="android-hinweis">
+      Eine APK von 6&nbsp;MB, nicht aus dem Play Store — dein Telefon fragt vor
+      der Installation nach. Die App holt sich Neues danach selbst.
     </p>
   </div>
 </section>

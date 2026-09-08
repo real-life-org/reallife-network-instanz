@@ -59,6 +59,20 @@ mitziehen, sonst springt die Seite beim Laden.
 
 Alle abgebildeten Menschen haben zugestimmt.
 
+## Android-App
+
+Die Einladungs-Sektion verlinkt die APK aus dem GitHub-Release des
+Stack-Repos. **Der Link ist fest verdrahtet und muss beim nächsten
+signierten Release nachgezogen werden** — ein `latest`-Link ginge ins Leere,
+weil die neuesten Releases dort OTA-Bundles ohne APK sind.
+
+Stand: `app-v0.2.3` (`org.reallife.reallifestack_203.apk`). Für `app-v0.2.4`
+und `app-v0.2.5` wurde der Signier- und Ausliefer-Schritt auf dem
+Release-Server nicht ausgeführt, deshalb hängt an ihnen keine Datei.
+Der native Teil ist damit älter als die Web-App — was ein Nutzer sieht,
+ist trotzdem aktuell, weil der F-Droid-Kanal seinen Web-Layer per OTA
+nachzieht (siehe `docs/RELEASING.md` im Stack-Repo).
+
 ## Schriften
 
 `landing/fonts/` enthält Bricolage Grotesque, Hanken Grotesk und Spectral —
