@@ -31,7 +31,8 @@
     "sidebar-accent": "#EFE7D3",
     "sidebar-accent-foreground": "#2A2820",
     "sidebar-border": "#E6DCC8",
-    "sidebar-ring": "#8C9A5B"
+    "sidebar-ring": "#8C9A5B",
+    "radius": "0.75rem"
   },
   "dark": {
     "background": "#20231B",
@@ -65,6 +66,7 @@
     "sidebar-accent": "#3D4233",
     "sidebar-accent-foreground": "#ECE6D6",
     "sidebar-border": "#3D4233",
-    "sidebar-ring": "#8C9A5B"
+    "sidebar-ring": "#8C9A5B",
+    "radius": "0.75rem"
   }
 }

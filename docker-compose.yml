@@ -34,14 +34,6 @@ services:
       - "traefik.http.routers.rls-app.tls.certresolver=letsencrypt"
       # Das Image laeuft unprivilegiert und lauscht darum auf 8080, nicht 80.
       - "traefik.http.services.rls-app.loadbalancer.server.port=8080"
-      # nginx im Image baut den Verzeichnis-Redirect /app -> /app/ aus seinem
-      # eigenen Hoerport und schickt darum nach http://<host>:8080/app/ - von
-      # aussen nicht erreichbar. Bis das im Image behoben ist (dort gehoert
-      # `absolute_redirect off`), setzt der Proxy den Schraegstrich selbst.
-      - "traefik.http.middlewares.rls-app-slash.redirectregex.regex=^https://([^/]+)/app$$"
-      - "traefik.http.middlewares.rls-app-slash.redirectregex.replacement=https://$${1}/app/"
-      - "traefik.http.middlewares.rls-app-slash.redirectregex.permanent=false"
-      - "traefik.http.routers.rls-app.middlewares=rls-app-slash"
       # Instanzen pinnen ihre Version - Watchtower soll NICHT automatisch
       # auf eine neue Minor ziehen.
       - "com.centurylinklabs.watchtower.enable=false"
