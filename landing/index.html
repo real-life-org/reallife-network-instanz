@@ -6,6 +6,18 @@
 <title>Reallife Network — Ein Netz wächst aus echter Begegnung</title>
 <meta name="description" content="Ein lebendiges Geflecht aus echten Beziehungen — lokal verwurzelt, freiwillig, von Hand geknüpft. Das Reallife Network wächst dort, wo Menschen aufeinander zugehen.">
 <link rel="icon" href="/branding/favicon.svg" type="image/svg+xml">
+<script>
+  // Die Wahl gilt vor dem ersten Anstrich - sonst blitzt beim Laden das
+  // falsche Schema auf. Ohne Wahl bleibt data-theme leer: dann entscheidet
+  // die Systemvorgabe im CSS.
+  try {
+    var w = localStorage.getItem("rls-theme")
+    if (w === "dark" || w === "light") document.documentElement.dataset.theme = w
+  } catch (e) {
+    // Privates Fenster oder gesperrter Speicher: dann eben Systemvorgabe.
+  }
+</script>
+
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
 <meta property="og:url" content="https://reallife.network">
@@ -53,9 +65,12 @@
   --band-body: #CDD6BB;
   --outline: #CDBFA3;
   --page: 1180px;
+  --shadow-tile: 0 10px 30px rgba(42, 40, 32, .10);
+  --band-border: transparent;
 }
 @media (prefers-color-scheme: dark) {
-  :root {
+  /* Systemvorgabe - greift nur, solange nicht von Hand HELL gewaehlt wurde. */
+  :root:not([data-theme="light"]) {
     --cream: #20231B;
     --surface: #2A2E23;
     --line: #3D4233;
@@ -73,8 +88,27 @@
     --band-line: #363B2C;
     --outline: #4A5040;
   }
-  .band { border-color: var(--band-line); }
 }
+
+/* Von Hand gewaehlt: sticht die Systemvorgabe in beide Richtungen. */
+:root[data-theme="dark"] {
+    --cream: #20231B;
+    --surface: #2A2E23;
+    --line: #3D4233;
+    --ink: #ECE6D6;
+    --body: #C8C3AF;
+    --muted: #A39E89;
+    --faint: #8A8571;
+    --sage: #A7B473;
+    --ocker: #E0AC55;
+    --terracotta: #DB7C58;
+    --forest: #6E9455;
+    --on-forest: #16180F;
+    --band-bg: #171A12;
+    --band-surface: #22261C;
+    --band-line: #363B2C;
+    --outline: #4A5040;
+  }
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 78px; overflow-x: clip; }
@@ -109,6 +143,24 @@ a { color: inherit; }
 .nav-links { display: none; align-items: center; gap: 26px; margin-left: auto; }
 .nav-links a { font-size: 14.5px; font-weight: 500; color: var(--muted); text-decoration: none; }
 .nav-links a:hover { color: var(--ink); }
+.schema {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; flex: none;
+  border: 1px solid var(--line); border-radius: 999px;
+  background: var(--surface); color: var(--muted);
+  cursor: pointer; padding: 0;
+}
+.schema:hover { color: var(--ink); border-color: var(--outline); }
+.schema svg { width: 17px; height: 17px; }
+/* Sonne im Dunkeln, Mond im Hellen: das Symbol zeigt, wohin es geht. */
+.schema .zu-hell { display: none; }
+:root[data-theme="dark"] .schema .zu-hell { display: block; }
+:root[data-theme="dark"] .schema .zu-dunkel { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .schema .zu-hell { display: block; }
+  :root:not([data-theme="light"]) .schema .zu-dunkel { display: none; }
+}
+
 .nav .cta-pill {
   margin-left: auto; border-radius: 999px; background: var(--terracotta);
   padding: 8px 16px; font-size: 14px; font-weight: 600; color: #F6F1E7; text-decoration: none;
@@ -128,10 +180,7 @@ a { color: inherit; }
 .kachel {
   display: block; width: 100%; height: auto; object-fit: cover;
   border: 1px solid var(--line); border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(42, 40, 32, .10);
-}
-@media (prefers-color-scheme: dark) {
-  .kachel { box-shadow: 0 10px 30px rgba(0, 0, 0, .35); }
+  box-shadow: var(--shadow-tile);
 }
 @media (min-width: 1024px) {
   .hero {
@@ -255,7 +304,7 @@ h2 { margin-top: 14px; font-size: clamp(30px, 4.4vw, 46px); font-weight: 800; li
 .quests-head p { max-width: 25em; margin: 0; font-size: 16px; color: var(--body); }
 
 /* --- Haltungen --- */
-.band { border-radius: 28px; background: var(--band-bg); padding: 56px 48px; border: 1px solid transparent; }
+.band { border-radius: 28px; background: var(--band-bg); padding: 56px 48px; border: 1px solid var(--band-border); }
 .band h2 { max-width: 18em; color: var(--band-text); font-size: clamp(28px, 3.8vw, 40px); line-height: 1.04; }
 .band p { margin: 16px 0 28px; max-width: 34em; font-size: 16.5px; line-height: 1.6; color: var(--band-body); }
 .chips { display: flex; flex-wrap: wrap; gap: 11px; }
@@ -296,6 +345,18 @@ footer { margin-top: 28px; }
       <a href="#wachsen">So wächst es</a>
       <a href="#einladungen">Einladungen</a>
     </nav>
+    <button class="schema" type="button" onclick="schemaUmschalten()"
+            aria-label="Zwischen hellem und dunklem Erscheinungsbild wechseln">
+      <svg class="zu-dunkel" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"></path>
+      </svg>
+      <svg class="zu-hell" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+      </svg>
+    </button>
     <a class="cta-pill" href="/app/">App öffnen</a>
   </div>
 </div>
@@ -535,5 +596,21 @@ footer { margin-top: 28px; }
   </div>
 </footer>
 
+<script>
+  // Drei Zustaende: ohne Wahl gilt das System; ein Klick setzt das Gegenteil
+  // des gerade Sichtbaren und merkt es sich. Der Schluessel ist derselbe, den
+  // die App unter /app liest - eine Wahl gilt fuer beide.
+  function schemaUmschalten() {
+    var wurzel = document.documentElement
+    var istDunkel = wurzel.dataset.theme
+      ? wurzel.dataset.theme === "dark"
+      : matchMedia("(prefers-color-scheme: dark)").matches
+    var neu = istDunkel ? "light" : "dark"
+    wurzel.dataset.theme = neu
+    try { localStorage.setItem("rls-theme", neu) } catch (e) {
+      // Nicht speicherbar: die Wahl gilt dann nur fuer diese Seite.
+    }
+  }
+</script>
 </body>
 </html>
