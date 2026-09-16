@@ -1,0 +1,13 @@
+{
+  "endpoints": {
+    "relayUrl": "wss://relay.web-of-trust.de",
+    "profilesUrl": "https://profiles.web-of-trust.de"
+  },
+  "defaultConnector": "wot",
+  "branding": {
+    "appName": "Reallife Network",
+    "faviconUrl": "/branding/favicon.svg",
+    "theme": { "accent": "#3e5e2e", "gray": "sand", "tint": 0.5, "radius": "large" },
+    "colorsUrl": "/branding/theme.json"
+  }
+}
