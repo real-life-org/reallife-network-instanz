@@ -86,3 +86,10 @@ fremden Server gemeldet.
 ## Bilder
 
 Alle abgebildeten Menschen haben der Veröffentlichung zugestimmt.
+
+## Lizenz
+
+Code und Konfiguration stehen unter [MIT](LICENSE). Ausgenommen sind Name und
+Logo von Real Life Network in `branding/`, die Fotos und Bilder in `landing/`
+und die Schriften in `landing/fonts/`, die unter der SIL Open Font License 1.1
+stehen.
