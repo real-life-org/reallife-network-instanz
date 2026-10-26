@@ -77,7 +77,8 @@ nachzieht (siehe `docs/RELEASING.md` im Stack-Repo).
 
 `landing/fonts/` enthält Bricolage Grotesque, Hanken Grotesk und Spectral —
 alle drei unter der [SIL Open Font License 1.1][ofl], die das Mitliefern
-ausdrücklich erlaubt. Sie liegen bewusst hier statt bei Google: so lädt die
+ausdrücklich erlaubt. Der Lizenztext mit dem Copyright liegt je Schrift
+daneben (`bricolage-OFL.txt`, `hanken-OFL.txt`, `spectral-OFL.txt`). Sie liegen bewusst hier statt bei Google: so lädt die
 Seite keine Ressource von Dritten, und niemand wird beim Besuch an einen
 fremden Server gemeldet.
 
@@ -92,4 +93,4 @@ Alle abgebildeten Menschen haben der Veröffentlichung zugestimmt.
 Code und Konfiguration stehen unter [MIT](LICENSE). Ausgenommen sind Name und
 Logo von Real Life Network in `branding/`, die Fotos und Bilder in `landing/`
 und die Schriften in `landing/fonts/`, die unter der SIL Open Font License 1.1
-stehen.
+stehen (Texte dort).
