@@ -37,6 +37,27 @@ der App entsteht.
 das Verzeichnis selbst nicht löschen und neu anlegen — der laufende Container
 zeigt sonst weiter auf das alte Inode und liefert 403.
 
+## Wahlweise: Thema „fractal" aus iOUI
+
+`branding/theme.fractal.json` ist ein Vorschlag aus dem iOUI-Designsystem
+(Infinity Labs): 36 Farb- und Formtokens je Schema, Werte als `hsl(…)`,
+erzeugt aus einer DTCG-`tokens.json`. Die Datei ist **nicht aktiv** —
+`theme.json` bleibt wie sie ist.
+
+Umschalten, je nachdem woher die `config.json` der App kommt:
+
+* **Eigene `branding/config.json`** (wie hier im Repo): dort
+  `"colorsUrl": "/branding/theme.fractal.json"` eintragen und
+  `docker compose restart app` — die Datei wird beim Containerstart kopiert.
+* **Aus `.env` erzeugt:** dann ist der Name fest, `entrypoint.sh` setzt immer
+  `colorsUrl: /branding/theme.json`. Umschalten heißt Inhalt ersetzen:
+  `cp branding/theme.fractal.json branding/theme.json` (Datei *im*
+  Verzeichnis ersetzen, siehe oben); wirkt beim nächsten Laden.
+
+Zurück geht es auf demselben Weg. Das Thema setzt alle 36 Namen und damit
+auch, was die Achsen (`accent`, `gray`, `tint`, `radius`) ableiten — es
+überschreibt sie, sichtbar u. a. an `--radius: 0`.
+
 ## Abweichungen von der Vorlage im Stack-Repo
 
 * `network_mode: bridge` statt eines externen `web`-Netzes: Traefik hängt auf
